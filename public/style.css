@@ -5,7 +5,9 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --transition-speed: 600ms;
+  --transition-speed: 225ms;
+  --fa-primary: #007cb9;
+  --fa-secondary: #007cb9;
 }
 
 body {
@@ -35,7 +37,7 @@ main {
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width 600ms ease;
+  transition: width var(--transition-speed) ease;
   overflow: scroll;
 }
 
@@ -85,11 +87,11 @@ main {
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: var(--fa-primary);
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: var(--fa-secondary);
 }
 
 .fa-primary,
@@ -122,8 +124,11 @@ main {
   transition: var(--transition-speed);
 }
 
-.navbar:hover .logo svg {
-  transform: rotate(-180deg);
+.navbar:hover .logo .fa-secondary {
+  transform: rotate(90deg);
+}
+.navbar:hover .logo .fa-primary {
+  transform: rotate(-90deg);
 }
 
 /* Small screens */
