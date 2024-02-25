@@ -5,10 +5,12 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --transition-speed: 225ms;
   --fa-primary: #206AC4;
   --fa-secondary: #206AC4;
   --pkwdblue: #206AC4;
+  --transition-speed: 225ms;
+  --transition-fadein: 600ms;
+  --transition-fadeout: 1.25s;
 }
 
 body {
@@ -147,11 +149,26 @@ main {
   transform: scale(0.95) rotate(-90deg);
   transform-box: fill-box;
   transform-origin: 92% 20%;
+  transition-duration: var(--transition-fadein);
 }
 .navbar:hover .logo .fa-primary {
   transform: scale(0.95) rotate(90deg);
   transform-box: fill-box;
   transform-origin: 0% 75%;
+  transition-duration: var(--transition-fadein);
+}
+
+.navbar:not(:hover) .logo .fa-secondary {
+  transform: scale(0.95) rotate(0deg);
+  transform-box: fill-box;
+  transform-origin: 92% 20%;
+  transition-duration: var(--transition-fadeout);
+}
+.navbar:not(:hover) .logo .fa-primary {
+  transform: scale(0.95) rotate(0deg);
+  transform-box: fill-box;
+  transform-origin: 0% 75%;
+  transition-duration: var(--transition-fadeout);
 }
 
 /* Small screens */
