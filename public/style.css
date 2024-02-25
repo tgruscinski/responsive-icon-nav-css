@@ -3,14 +3,15 @@
   font-family: 'Open Sans';
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
+  --text-third: #707070;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --fa-primary: #206AC4;
   --fa-secondary: #206AC4;
   --pkwdblue: #206AC4;
   --transition-speed: 225ms;
-  --transition-fadein: 600ms;
-  --transition-fadeout: 1.25s;
+  --transition-fadein: 500ms;
+  --transition-fadeout: 1s;
 }
 
 body {
@@ -163,12 +164,14 @@ main {
   transform-box: fill-box;
   transform-origin: 92% 20%;
   transition-duration: var(--transition-fadeout);
+  fill:var(--text-third);
 }
 .navbar:not(:hover) .logo .fa-primary {
   transform: scale(0.95) rotate(0deg);
   transform-box: fill-box;
   transform-origin: 0% 75%;
   transition-duration: var(--transition-fadeout);
+  fill:var(--text-third);
 }
 
 /* Small screens */
