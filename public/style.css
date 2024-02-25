@@ -6,9 +6,9 @@
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --transition-speed: 225ms;
-  --fa-primary: #007cb9;
-  --fa-secondary: #007cb9;
-  --pkwdblue: #2884F6;
+  --fa-primary: #206AC4;
+  --fa-secondary: #206AC4;
+  --pkwdblue: #206AC4;
 }
 
 body {
@@ -74,7 +74,7 @@ main {
   display: flex;
   align-items: center;
   height: 5rem;
-  color: var(--text-primary);
+  color: #dfdfdf;
   text-decoration: none;
   transition: var(--transition-speed);
   filter: grayscale(0%) opacity(1);
